@@ -4,7 +4,7 @@ metadata:
   name: kodekloud-app-deployment
   namespace: kodekloud-app-namespace
 spec:
-  replicas: 3
+  replicas: 4
   selector:
     matchLabels:
       app: kodekloud-app
