@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kodekloud-app-deployment
+  namespace: kodekloud-app-namespace
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: kodekloud-app
+  template:
+    metadata:
+      labels:
+        app: kodekloud-app
+    spec:
+      containers:
+        - name: kodekloudappcs
+          image: hpranav/kodekloudappcs
+          ports:
+            - containerPort: 80
